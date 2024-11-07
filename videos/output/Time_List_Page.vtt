@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00:06.000 --> 00:00:09.000
+This page allows you to view a list of current and past timesheets.
+
+00:00:10.000 --> 00:00:13.000
+At the top of the page is the Active Timesheets dropdown. 
+
+00:00:14.000 --> 00:00:20.000
+You can use this to toggle a list of all active timesheets that have the status of INUSE, SUBMITTED, or APPROVING. 
+
+00:00:21.000 --> 00:00:26.000
+This page also allows you to create a new Timesheet by clicking the Create Timesheet icon. 
+
+00:00:27.000 --> 00:00:33.000
+For detailed instructions on how to use this feature, refer to the Time - Dashboard Page video.
+
+00:00:34.000 --> 00:00:39.000
+Finally, at the bottom of the page is the Completed Timesheets dropdown menu. 
+
+00:00:40.000 --> 00:00:43.000
+This menu displays an aggregated list of all completed timesheets. 
+
+00:00:44.000 --> 00:00:49.000
+This is useful for historical purposes or if you need to edit a previously completed timesheet. 
+
+00:00:50.000 --> 00:00:59.000
+The most common timesheet statuses for completed timesheets are EXTRACTED (finalized timesheet) and CORRECTED (updated by an admin, requiring your edits).
+
+00:01:00.000 --> 00:01:04.000
+Editing a submitted timesheet follows the same process as editing a new one. 
+
+00:01:05.000 --> 00:01:10.000
+For details on editing a timesheet, refer to the Time - Current Page video. 
+
+00:01:11.000 --> 00:01:16.000
+Note that modifying an approved timesheet will reset its approval status, requiring resubmission.

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Unanet v.22.1.6 Training</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <div class="courseOverlay">
+    <div>
+      <i class="fas fa-spinner fa-spin"></i> Loading...
+    </div>  
+  </div>
+
+  <!-- Navbar -->    
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button type="button" id="sidebarCollapse" class="btn" title="Toggle Sidebar Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+    
+        <div class="flex-grow-1"></div>
+        <div>
+
+
+          <a href="#" class="btn btn-outline-secondary navbarBtn disabled viewCertificate" title="Certificate">Certificate</a>
+          <a href="#" class="btn btn-outline-secondary navbarBtn" data-bs-toggle="modal" data-bs-target="#helpModal" title="Help">Help</a>
+          <a href="#" class="btn btn-outline-secondary navbarBtn" data-bs-toggle="modal" data-bs-target="#aboutModal" title="About">About</a>
+          <a href="#" class="btn btn-outline-secondary navbarBtn" data-bs-toggle="modal" data-bs-target="#glossaryModal" title="Glossary">Glossary</a>
+          <a href="#" class="btn btn-outline-secondary navbarBtn" data-bs-toggle="modal" data-bs-target="#resourcesModal" title="Resources">Resources</a>
+          <a href="#" class="btn btn-outline-secondary navbarBtn" id="userSettings" data-bs-toggle="modal" data-bs-target="#settingsModal" title="Settings"><i class="fas fa-cog"></i></a>
+          <a href="#" class="btn btn-outline-secondary navbarBtn exitCourse hidden" data-bs-toggle="modal" data-bs-target="#exitModal" title="Exit">Exit</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="wrapper">
+
+        <!-- Sidebar  -->
+        <div id="sidebarContainer">
+          <nav id="sidebar">
+              <div class="sidebar-header">
+                 Unanet v.22.1.6 Training 
+                  <hr>
+              </div>
+            
+
+              <ul class="list-unstyled components" id="menuButtons">
+                  <!-- Dynamically Generated  -->
+              </ul>           
+          </nav>
+        </div> 
+
+        <div id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+        <!-- Page Content  -->
+        <div id="content">                 
+
+          <div class="container" id="mainContainer">     
+            
+            
+            <div class="card" id="card">
+
+              <div class="card-header">
+                <div class="titleContainer">
+                  <div class="slideTitleContainer">
+                    <h2 id="slideTitle">Lesson 1</h2>
+                    <h3 id="slideSubtitle">Knowledge Check 1</h3>
+                  </div>
+                  <span class="slideIndicator" id="slideIndicator">Slide 00 of 00</span>
+                </div>
+              </div>
+
+
+              <div class="card-body">
+
+                <!-- Video Content -->
+                <div id="videosContainer" class="videosContainer hidden">     
+                  <div id="videos" class="ratio ratio-16x9"></div>
+                  <div class="loading-icon">
+                    <i class="fas fa-spinner fa-spin"></i> Loading...
+                  </div>  
+                </div>
+
+                <!-- Lesson Objectives -->
+                <div id="lessonObjectives" class="objective">
+                </div>
+
+                <!-- Reflection Content -->
+                <div id="reflectionQuestions" class="reflection">
+                </div>
+
+                <!-- Quiz Content -->
+                <div id="quizQuestions" class="quiz">
+                  <!-- Dynamically Generated  -->
+                </div>
+
+                <!-- Test Overview Content -->
+                <div id="testOverview" class="testOverview">
+                  <!-- Dynamically Generated  -->
+                </div>
+
+                <!-- Test Simulation Overview Content -->
+                <div id="simulation" class="simulation">
+                   
+                  <!-- Dynamically Generated  -->
+                </div>
+
+                <!-- Summary Content -->
+                <div id="summary" class="summary">
+                  <!-- Dynamically Generated  -->
+                </div>
+
+            </div>
+
+
+
+           </div>
+
+           <!-- Slide Navigation  -->
+           <br>
+            <div class="slideNavBtns">
+              <button type="button" class="btn btn-secondary" id="previousSlideBtn" title="Previous Slide">Previous Slide</button>
+              <button type="button" class="btn btn-secondary" id="nextSlideBtn" title="Next Slide">Next Slide</button>
+            </div>
+
+        </div>
+      </div>
+
+  <div class="backdrop"></div>
+
+
+  <!-- Modals -->
+  <div class="modal fade" id="helpModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title ">Help</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Close"></button>
+        </div>
+        <div class="modal-body" id="helpContent">
+
+          <video controls id="helpVideo">
+            <source src="videos/elearning_website_help.mp4" type="video/mp4">
+            <track src="videos/captions.vtt" kind="subtitles" srclang="en" label="English" default>
+            Your browser does not support the video tag.
+          </video>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="exitAssessmentModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title ">Exit Assessment</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to exit the assessment? All progress will be lost.
+          <div class="modal-footer">
+            <button id="exitTestYes" class="btn btn-primary" title="Yes">Yes</button>
+            <button id="exitTestNo" class="btn btn-secondary" title="No">No</button>
+          </div>
+
+        </div>        
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="aboutModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title ">About</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Close"></button>
+        </div>
+        <div class="modal-body">
+          The purpose of this training is to provide a comprehensive understanding of the legacy Unanet v.22.1.6 core functionalities, including managing timesheets, updating project codes, and changing personal account settings. This training is designed for self-paced learning in a corporate environment but can also be used as a supplementary resource in instructor-led settings.<br><br>
+          The training content is provided as-is and free to use.
+
+          The website, course content, videos, resources, and simulation(s) were designed and developed by
+          <a href="https://www.linkedin.com/in/dominique-thomas-ab56b433/" target="_blank" class="link" title="Dominique Thomas' LinkedIn profile">Dominique Thomas</a>. 
+          <br><br>
+          Stock music provided by AudioKraken, from Pond5.
+          <br><br>
+          <div class="dateUpdated">The last update for this training was made on <span class="emphasis">08/26/2024</span>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="glossaryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title">Glossary</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Close"></button>
+        </div>
+        <div class="modal-body" id="glossaryContent">
+          <!-- Dynamically Generated  -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="settingsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5">User Settings</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Close"></button>
+        </div>
+        <div class="modal-body" id="userSettingsContent">
+          <div class="modal-body">
+            <p id="userSettingsDiv">Enter your preferred first and last name (maximum 10 characters each). 
+              Click the Save button to save your data.
+            </p>
+            <form>
+              <p></p>
+              <div class="form-group">
+                <label for="firstName"><b>First Name:</b></label>
+                <input type="text" class="form-control" id="firstName" maxlength="10" value="John">
+              </div><br>
+              <div class="form-group">
+                <label for="lastName"><b>Last Name:</b></label>
+                <input type="text" class="form-control" id="lastName" maxlength="10" value="Doe">
+              </div>
+            </form>
+
+            
+          </div>
+
+          <div class="alert alert-danger" role="alert" id="nameWarningMsg">
+            Warning Message
+          </div>
+          <div class="alert alert-success" role="alert" id="nameSuccessMsg">
+            Your data was saved successfully.
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" class="btn btn-secondary" id="saveName" title="Save">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="resourcesModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5">Resources</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Close"></button>
+        </div>
+        <div class="modal-body" id="resourcesContent">
+          <!-- Dynamically Generated  -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exitModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title">Exit Course</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to exit the course?
+          <div class="modal-footer">
+            <button id="exitCourseYes" class="btn btn-primary" title="Yes">Yes</button>
+            <button id="exitCourseNo" class="btn btn-secondary" title="No">No</button>
+          </div>
+
+        </div>  
+      </div>
+    </div>
+  </div>
+
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="js/SCORM_API_wrapper.js"></script>
+    <script src="js/index.js"></script>
+
+
+</body>
+
+</html>

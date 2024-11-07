@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:06.000 --> 00:00:09.000
+The List tab allows you to view and manage all active projects.
+
+00:00:10.000 --> 00:00:15.000
+The AVAILABLE PROJECTS (/TASK)  section lists available projects assigned to you. 
+
+00:00:16.000 --> 00:00:20.000
+The SELECTED PROJECTS / (TASKS) section lists all active projects in your timesheet. 
+
+00:00:21.000 --> 00:00:25.000
+These projects appear in the PROJECTS column dropdown menu of your timesheet. 
+
+00:00:26.000 --> 00:00:31.000
+To include a project in your timesheet, it must be in the SELECTED PROJECTS (/TASKS) list.
+
+00:00:32.000 --> 00:00:25.000
+Typically, your timesheet administrator sets these projects by default. 
+
+00:00:36.000 --> 00:00:45.000
+However, you may need to update this list if you receive a new project code or if an old project is no longer active, as Unanet does not remove these by default.
+
+00:00:46.000 --> 00:00:52.000
+To add a project to your timesheet, select it from the AVAILABLE PROJECTS (/TASKS) list and click the Right Arrow icon. 
+
+00:00:54.000 --> 00:00:59.000
+To remove a project, select it from the SELECTED PROJECTS (/ TASKS) list and click the Left Arrow icon.
+
+00:01:01.000 --> 00:01:03.000
+Click the Save button to apply your changes.
