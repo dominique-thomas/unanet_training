@@ -1533,6 +1533,7 @@ $('#saveName').on('click', function() {
     var validNamePattern = /^[A-Za-z\s]+$/;
     var errorStr = "";
     var isInvalid = false;
+
     firstName = $('#firstName').val().trim();
     lastName = $('#lastName').val().trim();
 
@@ -1550,11 +1551,12 @@ $('#saveName').on('click', function() {
         isInvalid = true;
     }
 
+    $("#nameWarningMsg").hide();
+    $("#nameSuccessMsg").hide();  
+
     if(isInvalid){
         $("#nameWarningMsg").text(errorStr).show();
-        $("#nameSuccessMsg").hide();
     }else{
-        $("#nameWarningMsg").hide();
         $("#nameSuccessMsg").show();
     }
 
@@ -1575,7 +1577,7 @@ $('#saveName').on('click', function() {
 //          Function Handlers
 //----------------------------------------
 function hideRemediation(){
-    const feedback = $("div .alert");
+    const feedback = $("#quiz-alert");
     feedback.addClass("hidden");
     feedback.removeClass(alertIncorrectClass);
     feedback.removeClass(alertCorrectClass);
@@ -1584,7 +1586,7 @@ function hideRemediation(){
 
 function showRemediation(type, str){
 
-    const feedback = $("div .alert");
+    const feedback = $("#quiz-alert");
 
     feedback.removeClass("hidden");
     feedback.removeClass(alertIncorrectClass);
@@ -1954,7 +1956,8 @@ function generateQuestion(id){
     });
 
     let alert = $("<div>", {
-        class : "alert hidden"
+        class : "alert hidden",
+        id: "quiz-alert"
     });
 
     alert.attr("role", "alert");
