@@ -39859,8 +39859,6 @@ if (reversed == null) { reversed = false; }
 		 		}
 		
 				userPassword = newPassword;
-				root.setPassword(newPassword);
-				console.log("Password has been updated to: " + root.getPassword());
 				
 				parentParent.aoi_data.passed = passed;
 				parentParent.aoi_data.details = details;
@@ -58052,12 +58050,9 @@ if (reversed == null) { reversed = false; }
 		randomized_password = generateRandomPassword(10);
 		randomized_newPassword = generateRandomPassword(10);
 		
-		this.getPassword = function(){			
+		this.getPassword = function(){
+			
 			return randomized_password;
-		}
-
-		this.setPassword = function(str){
-			randomized_password = str;
 		}
 		
 		this.getNewPassword = function(){
