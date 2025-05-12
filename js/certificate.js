@@ -1,3 +1,9 @@
+/**
+ * Project: Unanet v.22.1.6 Training
+ * Description: JavaScript for dynamically generating and displaying a certificate of completion.
+ * Author: Dominique Thomas (github.com/dominique-thomas)
+ * License: Shared publicly for demonstration purposes only. Reuse or redistribution not permitted without permission.
+ */
 //----------------------------------------
 //          Variable declarations
 //----------------------------------------
