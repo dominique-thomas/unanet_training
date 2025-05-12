@@ -1,4 +1,9 @@
-
+/**
+ * Project: Unanet v.22.1.6 Training
+ * Description: Core script for navigation, interaction handling, and module logic.
+ * Author: Dominique Thomas (github.com/dominique-thomas)
+ * License: Shared publicly for demonstration purposes only. Reuse or redistribution not permitted without permission.
+ */
 //----------------------------------------
 //          Variable declarations
 //----------------------------------------
